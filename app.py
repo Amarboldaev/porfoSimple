@@ -9,10 +9,12 @@ system = platform.system()
 
 zam = ""
 
-if system == "linux":
+if system == "Linux":
     zam = constant.Constant["pathUnix"]
 elif system == "Windows":
     zam =constant.Constant["relativePath"]
+else: 
+    print("zam oldsongui")
 
 class Flashcard:
     def __init__(self):
