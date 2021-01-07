@@ -6,18 +6,20 @@ import platform
 import constant
 
 system = platform.system()
-print(system)
+
+zam = ""
+
 if system == "linux":
-    path = constant.Constant["pathUnix"]
+    zam = constant.Constant["pathUnix"]
 elif system == "Windows":
-    path =constant.Constant["relativePath"]
+    zam =constant.Constant["relativePath"]
 
 class Flashcard:
     def __init__(self):
         try:
-            self.data = pd.read_csv(f"{path}/data/words_to_learn.csv")
+            self.data = pd.read_csv(f"{zam}/data/words_to_learn.csv")
         except FileNotFoundError:
-            self.original_data = pd.read_csv(f"{path}/data/japanese_words.csv")
+            self.original_data = pd.read_csv(f"{zam}/data/japanese_words.csv")
             self.to_learn = self.original_data.to_dict(orient="records")
         else:
             self.to_learn = self.data.to_dict(orient="records") 
