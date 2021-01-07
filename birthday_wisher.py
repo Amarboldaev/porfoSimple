@@ -2,6 +2,15 @@ import pandas as pd
 import random 
 import datetime as dt
 import smtplib
+import platform
+import constant
+
+system = platform.system()
+print(system)
+if system == "linux":
+    path = constant.Constant["pathUnix"]
+elif system == "Windows":
+    path =constant.Constant["relativePath"]
 
 today = dt.datetime.now()
 my_email = "fortecter@gmail.com"
