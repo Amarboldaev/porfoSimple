@@ -5,7 +5,7 @@ import smtplib
 
 today = dt.datetime.now()
 my_email = "fortecter@gmail.com"
-my_password = "Tratata1.3!!?"
+my_password = "Quantum123#"
 
 data = pd.read_csv("./static/data/birthdays.csv")
 exact_month = data[data["month"] == today.month]
