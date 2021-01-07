@@ -59,6 +59,10 @@ def Flashy():
         # print(crand_list)
         return render_template("./flashcard.html", title = "Japanese" , word = crand_list["Japanese"], ran_color=random.choice(bgcolor), en_word = crand_list["English"], en_title="English")
 
+# Error Handlers
+@app.errorhandler(404)
+def page_not_found(error):
+   return render_template('404.html', title = '404'), 404
 
 if __name__ == ("__main__"):
     app.run()
