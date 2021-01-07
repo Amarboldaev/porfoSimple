@@ -78,11 +78,11 @@ h3 {
 #language-en{
     /* visibility: hidden; */
     opacity: 0;
-    animation: animate1 2s forwards 4s ease-in-out;
+    animation: animate1 2s forwards 3s ease-in-out;
 }
 #letter-en {
     opacity: 0;
-    animation: animate1 2s forwards 4s ease-in-out;
+    animation: animate1 2s forwards 3s ease-in-out;
 }
 @keyframes animate1{
     from {
