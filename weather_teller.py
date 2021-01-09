@@ -1,7 +1,10 @@
 import requests
 import pprint
 from twilio.rest import Client
+from twilio.http.http_client import TwilioHttpClient
 import os
+
+
 
 # account_sid = os.environ['TWILIO_ACCOUNT_SID']
 # auth_token = os.environ['TWILIO_AUTH_TOKEN']
@@ -36,7 +39,8 @@ for hour_data in weather_slice:
         will_rain = True
         
 if will_rain:
-    client = Client(account_sid, auth_token)
+    proxy_client = TwilioHttpClient()
+    client = Client(account_sid, auth_token, http_client=proxy_client)
     message = client.messages \
                 .create(
                      body="It's going to rain today. Remember to bring an ☂️",
