@@ -9,7 +9,7 @@ import os
 # account_sid = os.environ['TWILIO_ACCOUNT_SID']
 # auth_token = os.environ['TWILIO_AUTH_TOKEN']
 account_sid = "ACb29f6f0f81d23a3999e0775a29f59570"
-auth_token = "018e1aef7815393965908c9ef8681195"
+auth_token = "6d19a851827077da4ad18aa0e98fa555"
 
 HOUR = 12
 LATITUDE = 47.886398
@@ -41,7 +41,7 @@ for hour_data in weather_slice:
 if will_rain:
     proxy_client = TwilioHttpClient()
     proxy_client.session.proxies = {'https': os.environ['https_proxy']}
-    client = Client(account_sid, auth_token, http_client=proxy_client)
+    client = Client(account_sid, auth_token, http_client=proxy_client) #, http_client=proxy_client
     message = client.messages \
                 .create(
                      body="It's going to rain today. Remember to bring an ☂️",
