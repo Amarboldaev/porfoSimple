@@ -8,13 +8,13 @@ import os
 
 # account_sid = os.environ['TWILIO_ACCOUNT_SID']
 # auth_token = os.environ['TWILIO_AUTH_TOKEN']
-account_sid = "ACb29f6f0f81d23a3999e0775a29f59570"
-auth_token = "6d19a851827077da4ad18aa0e98fa555"
+account_sid = os.environ.get("account_sid")
+auth_token = os.environ.get("auth_token")
 
 HOUR = 12
 LATITUDE = 47.886398
 LONGITUDE = 106.905746
-API_KEY = '9964a280622f3b53374b028916985d94'
+API_KEY = os.environ.get("API_KEY")
 URL = 'https://api.openweathermap.org/data/2.5/onecall'
 # https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API key}
 # https://api.openweathermap.org/data/2.5/onecall?lat=47.886398&lon=106.905746&appid=9964a280622f3b53374b028916985d94
