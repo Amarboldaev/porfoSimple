@@ -48,6 +48,10 @@ def inject_now():
 def main():
     return render_template("./index.html")
 
+@app.route('/7c')
+def sevenC():
+    return render_template("./7c.html")
+
 @app.route('/flashy', methods=["POST", "GET"])
 def Flashy():
     if request.method == "POST":
