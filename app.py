@@ -52,6 +52,10 @@ def main():
 def sevenC():
     return render_template("./7c.html")
 
+@app.route('/SelengeZDTG')
+def selengeZDTG():
+    return render_template("./SelengeZDTG.html")
+
 @app.route('/flashy', methods=["POST", "GET"])
 def Flashy():
     if request.method == "POST":
