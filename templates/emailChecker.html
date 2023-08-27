@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cyber Hunters Club</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='/css/glitch.css')}}"
+    />
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='img/favicon.ico')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='assets/css/bootstrap.min.css')}} "
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='assets/css/style.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='assets/css/videojs.css')}}"
+    />
+
+    <script src="{{ url_for('static', filename='assets/js/jquery-3.6.4.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/js/bootstrap.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/js/main.js')}}"></script>
+  </head>
+  <body>
+    <main>
+      <div id="password-box" class="full-center">
+        <form id="passwordForm" action="">
+          <div class="computer-text">
+            Email Address
+            <span id="password-input"
+              >[
+              <input type="text" name="sipassword" id="sipassword" autofocus />
+              ]</span
+            >
+          </div>
+        </form>
+      </div>
+
+      <div id="granted-box" class="full-center">
+        <div id="granted-text">Access Granted</div>
+      </div>
+      <div
+        id="you-have-not-been-hacked-box"
+        class="full-center glitch-wrap glitch"
+        data-time=""
+      >
+        <div class="glitch-clock is-off">
+          <div class="glitch-time">
+            <div class="glitch-content">
+              <div id="you-have-not-been-hacked-text" class="bold-text">
+                Approved!
+              </div>
+            </div>
+          </div>
+          <div id="you-have-not-been-hacked-text">
+            Hackers don't have your information.
+          </div>
+        </div>
+      </div>
+
+      <div id="denied-box" class="full-center">
+        <div id="denied-text">Invalid Email Address</div>
+      </div>
+
+      <div
+        id="you-have-been-hacked-box"
+        class="full-center glitch-wrap glitch"
+        data-time=""
+      >
+        <div class="glitch-clock is-off">
+          <div class="glitch-time">
+            <div class="glitch-content">
+              <div id="you-have-been-hacked-text" class="bold-text">
+                Rejected!
+              </div>
+            </div>
+          </div>
+          <div id="you-have-been-hacked-text"></div>
+          Hackers may have your information
+        </div>
+      </div>
+
+      <div id="accessing-box" class="full-center">
+        <div id="accessing-text">Checking The Email Address</div>
+        <div id="accessing-loading-bar">
+          <div id="accessing-loading-percentage">1%</div>
+          <div id="progressBar"></div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-nav">
+        <nav role="navigation" aria-label="footer menu">
+          <ul id="footer-links"></ul>
+        </nav>
+        <div class="links-footer-copyright">
+          <p>© Amarboldaev, All Rights Reserved, Cyber Hunters Club</p>
+        </div>
+      </div>
+    </footer>
+    <script src="{{ url_for('static', filename='assets/js/video.min.js')}}"></script>
+  </body>
+</html>

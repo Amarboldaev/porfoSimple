@@ -12,9 +12,10 @@ zam = ""
 if system == "Linux":
     zam = constant.Constant["pathUnix"]
 elif system == "Windows":
-    zam =constant.Constant["relativePath"]
-else: 
+    zam = constant.Constant["relativePath"]
+else:
     print("zam oldsongui")
+
 
 class Flashcard:
     def __init__(self):
@@ -24,8 +25,8 @@ class Flashcard:
             self.original_data = pd.read_csv(f"{zam}/data/japanese_words.csv")
             self.to_learn = self.original_data.to_dict(orient="records")
         else:
-            self.to_learn = self.data.to_dict(orient="records") 
-    
+            self.to_learn = self.data.to_dict(orient="records")
+
     current_card = {}
 
     def next_card(self):
@@ -36,27 +37,30 @@ class Flashcard:
 app = Flask(__name__)
 
 
+bgcolor = ["red", "blue", "silver", "green", "yellow"]
 
-
-bgcolor = ["red","blue","silver","green","yellow"]
 
 @app.context_processor
 def inject_now():
-    return {'now': datetime.utcnow()}
+    return {"now": datetime.utcnow()}
 
-@app.route('/')
+
+@app.route("/")
 def main():
     return render_template("./index.html")
 
-@app.route('/7c')
+
+@app.route("/7c")
 def sevenC():
     return render_template("./7c.html")
 
-@app.route('/SelengeZDTG')
+
+@app.route("/SelengeZDTG")
 def selengeZDTG():
     return render_template("./SelengeZDTG.html")
 
-@app.route('/flashy', methods=["POST", "GET"])
+
+@app.route("/flashy", methods=["POST", "GET"])
 def Flashy():
     if request.method == "POST":
         # print("POST orj irlee")
@@ -65,12 +69,26 @@ def Flashy():
         hello = Flashcard()
         crand_list = hello.next_card()
         # print(crand_list)
-        return render_template("./flashcard.html", title = "Japanese" , word = crand_list["Japanese"], ran_color=random.choice(bgcolor), en_word = crand_list["English"], en_title="English")
+        return render_template(
+            "./flashcard.html",
+            title="Japanese",
+            word=crand_list["Japanese"],
+            ran_color=random.choice(bgcolor),
+            en_word=crand_list["English"],
+            en_title="English",
+        )
+
+
+@app.route("/emailCheck")
+def emailChecker():
+    return render_template("./emailChecker.html")
+
 
 # Error Handlers
 @app.errorhandler(404)
 def page_not_found(error):
-   return render_template('404.html', title = '404'), 404
+    return render_template("404.html", title="404"), 404
+
 
 if __name__ == ("__main__"):
     app.run()

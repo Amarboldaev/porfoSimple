@@ -1,0 +1,28 @@
+{
+    "onetrust": false,
+    "analytics": false,
+    "language": "en",
+    "default_subtitle": "en",
+    "footer_links": [
+        {
+            "url": "https://disneytermsofuse.com/english-united-kingdom/",
+            "text": "Terms of Use"
+        },
+        {
+            "url": "https://privacy.thewaltdisneycompany.com/en/current-privacy-policy/",
+            "text": "Privacy Policy"
+        },
+        {
+            "url": "https://privacy.thewaltdisneycompany.com/en/current-privacy-policy/privacy-notice/",
+            "text": "UK & EU Privacy Rights"
+        },
+        {
+            "url": "https://privacy.thewaltdisneycompany.com/en/current-privacy-policy/cookies-policy",
+            "text": "Cookie Policy"
+        },
+        {
+            "url": "https://preferences-mgr.truste.com/?pid=disney01&aid=disneyemea01&type=Disneyemea",
+            "text": "Interest-Based Ads"
+        }
+    ]
+}
