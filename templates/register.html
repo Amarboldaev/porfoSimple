@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cyber Hunters Club | Register</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='/css/glitch.css')}}"
+    />
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='img/favicon.ico')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='assets/css/bootstrap.min.css')}} "
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='assets/css/style.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='assets/css/videojs.css')}}"
+    />
+
+    <script src="{{ url_for('static', filename='assets/js/jquery-3.6.4.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/js/bootstrap.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='assets/js/poster.js')}}"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <canvas id="Matrix"></canvas>
+    <script src="{{ url_for('static', filename='assets/js/matrixer.js')}}"></script>
+    <main>
+      <div id="cyber-title" class="mid-top form-stroker">
+        <h1 class="neonText">Cyber Hunter Club</h1>
+      </div>
+      <!-- <div id="password-box" class="full-center form-stroker">
+        <form id="passwordForm" action="">
+          <div class="computer-text">
+            Domain
+            <span id="password-input"
+              >[
+              <input type="text" name="sipassword" id="sipassword" autofocus />
+              ]</span
+            >
+            <button class="neon-button middle-button">Register</button>
+          </div>
+        </form>
+      </div> -->
+      <iframe
+        class="full-center form-stroker"
+        src="https://docs.google.com/forms/d/e/1FAIpQLSfP_zvNIahxJ2CK1bktLksF3BMs2nuw5S3LiAp4onzvG-pVGw/viewform?embedded=true"
+        width="640"
+        height="419"
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0"
+        >Loading…</iframe
+      >
+
+      <div id="granted-box" class="full-center form-stroker">
+        <div id="granted-text">Access Granted</div>
+      </div>
+      <div
+        id="you-have-not-been-hacked-box"
+        class="full-center glitch-wrap glitch form-stroker"
+        data-time=""
+      >
+        <div class="glitch-clock is-off">
+          <div class="glitch-time">
+            <div class="glitch-content">
+              <div id="you-have-not-been-hacked-text" class="bold-text">
+                Thank you for Registering Cyber Hunters Club
+              </div>
+            </div>
+          </div>
+          <div id="you-have-not-been-hacked-text">
+            We Will contact to you as soon as possible
+          </div>
+        </div>
+      </div>
+
+      <div id="denied-box" class="full-center form-stroker">
+        <div id="denied-text">Register Failed.</div>
+      </div>
+
+      <div id="accessing-box" class="full-center form-stroker">
+        <div id="accessing-text">Registering...</div>
+        <div id="accessing-loading-bar">
+          <div id="accessing-loading-percentage">1%</div>
+          <div id="progressBar"></div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-nav">
+        <nav role="navigation" aria-label="footer menu">
+          <ul id="footer-links"></ul>
+        </nav>
+        <div class="links-footer-copyright">
+          <p>© Amarboldaev, All Rights Reserved, Cyber Hunters Club</p>
+        </div>
+      </div>
+    </footer>
+    <!-- <script src="{{ url_for('static', filename='assets/js/video.min.js')}}"></script> -->
+  </body>
+</html>
